@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Blur</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="src/assets/js/image_blur.js"></script>
+    <link rel="stylesheet" href="src/assets/css/image_blur.css">
+</head>
+<body>
+   <div class="Maincontainer">
+    <div class="btnContainer">
+        <div id="uploadImagebtn" class="upload">
+            <button onclick="uploadImage()">Upload Image</button>
+            <label for="new-image-upload" class="d-none">
+                <input type="file" id="new-image-upload" class="d-none" name="file"
+                  onchange="handleImageSelect(event)" class="d-none" accept="image/jpeg,image/png">
+            </label>
+        </div>
+        <div id="BlurImagebtn" class="upload d-none" >
+            <button onclick="addFilter()">Add Filter</button>
+        </div>
+    </div>
+    <div class="imagecontainer">
+      <div id="originalimagecontid" class="originalimage d-none">
+          <p>Image without Filter</p>
+          <img src="" alt="" id="originalimageid">
+
+      </div>
+      <div id="blurimagecontid" class="bluredimage d-none">
+          <p>Image After Adding Filter</p>
+          <img src="" alt="" id="bluredimageid">
+      </div>
+    </div>
+   </div>
+</body>
+</html>
